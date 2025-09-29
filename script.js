@@ -7,6 +7,15 @@ let timeRemaining = 600; // 10 minutes in seconds
 let studentName = "";
 let quizScore = 0;
 
+//dropdown menu
+const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
+
 // Quiz questions data
 const quizQuestions = [
   {

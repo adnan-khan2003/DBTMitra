@@ -7,13 +7,23 @@ let timeRemaining = 600; // 10 minutes in seconds
 let studentName = "";
 let quizScore = 0;
 
-//dropdown menu
-const menuBtn = document.getElementById("menu-btn");
+// toggle mobile menu
+  const menuBtn = document.getElementById("menu-btn");
   const menu = document.getElementById("menu");
+  const menuLinks = menu.querySelectorAll("button"); // all dropdown buttons
 
+  // Toggle menu when hamburger clicked
   menuBtn.addEventListener("click", () => {
     menu.classList.toggle("hidden");
   });
+
+  // Close menu when a link is clicked
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.add("hidden");
+    });
+  });
+
 
 
 // Quiz questions data

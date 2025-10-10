@@ -258,6 +258,8 @@ const quizQuestions = [
 
 // Navigation functions
 function showSection(sectionName) {
+  // 👇 Automatically scroll to top
+  window.scrollTo({ top: 0, behavior: "smooth" });
   // Hide all sections
   document.querySelectorAll(".section").forEach((section) => {
     section.classList.add("hidden");
@@ -886,3 +888,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 })();
+
